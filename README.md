@@ -7,6 +7,17 @@ This project demonstrates robust microservice architecture for managing discussi
 
 This microservice-based backend application provides a comprehensive set of functionalities for user management and discussion handling. It includes APIs for user authentication, user interactions such as following other users, posting discussions with optional images and hashtags, managing comments, likes, and more.
 
+## Microservices
+
+### Auth-Service
+- **URL**: [https://social-media-backend-application.onrender.com](https://social-media-backend-application.onrender.com)
+- **Description**: Handles user authentication, signup, login, user management, and authorization using JWT tokens.
+
+### Discussion-Service
+- **URL**: [https://social-media-backend-application-f4un.onrender.com](https://social-media-backend-application-f4un.onrender.com)
+- **Description**: Manages discussions, posts, comments, likes, and search functionalities based on tags and text content.
+
+##Low-Level Design (LLD) of the Flow
 ## Services Overview
 ### User Service
 - Create, update, delete users.
