@@ -1,0 +1,12 @@
+services:
+  - name: discussion-service
+    env:
+      - key: PORT
+        value: "5003"
+      - key: MONGODB_URI
+        from_secret: mongodb_uri
+      - key: JWT_SECRET
+        from_secret: jwt_secret
+      - key: JWT_EXPIRE
+        value: "24h"
+    startCommand: npm start

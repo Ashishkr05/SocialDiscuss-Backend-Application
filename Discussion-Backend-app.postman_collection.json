@@ -1,0 +1,511 @@
+{
+	"info": {
+		"_postman_id": "faa46a21-79b7-44aa-b6ba-a238be4a0a0e",
+		"name": "Disussion-Backend-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34613204"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/add-domain",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjZkMmU2MWQ2YzBmZWYzNTU1YTI0ZGYiLCJpYXQiOjE3MTg0MzE0MDEsImV4cCI6MTcxODUxNzgwMX0.p4tZ2wCCDzUtdwXyfByj221k64gRfxoVfvorLrxHe4g",
+						"uuid": "162e7a4b-458d-45cf-92bf-6ac2c0b8c0b4"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"test2.dnsmanager.com\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/protected",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"protected"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/auth/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"test\",\r\n  \"email\": \"test@example.com\",\r\n  \"mobile\": \"14234567890\",\r\n  \"password\": \"password\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test@example.com\",\r\n  \"password\": \"password\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/auth/user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjZkY2RhYTI5ZDk1ZTA3Y2MxMTg4NWMiLCJlbWFpbCI6InRlc3QyQGV4YW1wbGUuY29tIiwiaWF0IjoxNzE4NDcyMTcyLCJleHAiOjE3MTg1NTg1NzJ9.XCtBkcnRlzjOrVYF0xgRidkK7eFkL0NVwOmjnHI5tvM",
+						"uuid": "9273abc2-9d57-4043-b5d6-674de5ea72b9"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/auth/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"user"
+					]
+				},
+				"description": "Delete user"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/auth/users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjZkY2UxZjI5ZDk1ZTA3Y2MxMTg4NjEiLCJlbWFpbCI6InRlc3QyQGV4YW1wbGUuY29tIiwiaWF0IjoxNzE4NDcyMzY1LCJleHAiOjE3MTg1NTg3NjV9.aTAr_rzufmxlUL1R9Rdm2n8GoXnXphWIdZg9vwVrQZU",
+						"uuid": "11f24abe-7597-4e1f-b1eb-ffa8a443f141"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/auth/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"users"
+					]
+				},
+				"description": "Get all users"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/auth/follow",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjZkY2UxZjI5ZDk1ZTA3Y2MxMTg4NjEiLCJlbWFpbCI6InRlc3QyQGV4YW1wbGUuY29tIiwiaWF0IjoxNzE4NDcyMzY1LCJleHAiOjE3MTg1NTg3NjV9.aTAr_rzufmxlUL1R9Rdm2n8GoXnXphWIdZg9vwVrQZU",
+						"uuid": "ef01c38c-db94-406c-b3a2-8773fb2b1699"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"followUserId\": \"666d2e61d6c0fef3555a24df\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/follow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"follow"
+					]
+				},
+				"description": "Follow user"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/auth/search?name=test2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjZkY2UxZjI5ZDk1ZTA3Y2MxMTg4NjEiLCJlbWFpbCI6InRlc3QyQGV4YW1wbGUuY29tIiwiaWF0IjoxNzE4NDcyMzY1LCJleHAiOjE3MTg1NTg3NjV9.aTAr_rzufmxlUL1R9Rdm2n8GoXnXphWIdZg9vwVrQZU",
+						"uuid": "c7904e82-8b55-4d39-bca3-1ca2a02777d3"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/auth/search?name=test2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "test2"
+						}
+					]
+				},
+				"description": "Search User by name"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5003/api/comments",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjZkNDU2ZWQ0MGJmYTM1ODczYmVkYjYiLCJpYXQiOjE3MTg0MzcyNzMsImV4cCI6MTcxODUyMzY3M30.VY2d2mEif2KkhL6Ykpv4fXPnWv-Kk1BmsW8GZAIjAmo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\": \"This is my comment\",\r\n    \"discussionId\": \"666d2e61d6c0fef3555a24df\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5003/api/comments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"api",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5003/api/discussions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjZkNDU2ZWQ0MGJmYTM1ODczYmVkYjYiLCJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJpYXQiOjE3MTg0NDU1NDUsImV4cCI6MTcxODUzMTk0NX0.6ttq6n_ZWbUf_2mYHAg_CNRheaZLLqzP9YEvPM2IBBM",
+						"uuid": "4e4c3db8-d4b3-44c5-87ef-4591e6c16dcb"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"text\": \"This is a new discussion post\",\r\n  \"image\": \"base64-encoded-image-data\",  \r\n  \"hashtags\": [\"#discussion\", \"#testing\"]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5003/api/discussions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"api",
+						"discussions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5003/api/discussions/666d66d73e30c51e0482ebe9",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjZkNDU2ZWQ0MGJmYTM1ODczYmVkYjYiLCJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJpYXQiOjE3MTg0NDU1NDUsImV4cCI6MTcxODUzMTk0NX0.6ttq6n_ZWbUf_2mYHAg_CNRheaZLLqzP9YEvPM2IBBM",
+						"uuid": "fc35fc4b-6e5b-4c05-819d-833364b3ef63"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\": \"This discussion is on the technology\",\r\n    \"image\": \"base64-encoded-image-data\",\r\n    \"hashtags\": [\"#technology\", \"#discussion\"]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5003/api/discussions/666d66d73e30c51e0482ebe9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"api",
+						"discussions",
+						"666d66d73e30c51e0482ebe9"
+					]
+				},
+				"description": "for update descusion\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5003/api/discussions/666d691d3e30c51e0482ebee",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjZkNDU2ZWQ0MGJmYTM1ODczYmVkYjYiLCJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJpYXQiOjE3MTg0NDU1NDUsImV4cCI6MTcxODUzMTk0NX0.6ttq6n_ZWbUf_2mYHAg_CNRheaZLLqzP9YEvPM2IBBM",
+						"uuid": "0f6e5ca9-204e-4ef4-9ea5-2d157c5d1bb0"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5003/api/discussions/666d691d3e30c51e0482ebee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"api",
+						"discussions",
+						"666d691d3e30c51e0482ebee"
+					]
+				},
+				"description": "Delete discussion"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5003/api/discussions/666dd685a7e4b831c4e0fcb1/comments",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjZkY2UxZjI5ZDk1ZTA3Y2MxMTg4NjEiLCJlbWFpbCI6InRlc3QyQGV4YW1wbGUuY29tIiwiaWF0IjoxNzE4NDcyMzY1LCJleHAiOjE3MTg1NTg3NjV9.aTAr_rzufmxlUL1R9Rdm2n8GoXnXphWIdZg9vwVrQZU",
+						"uuid": "5b56e2de-7e2f-42b4-a456-1fab21e2e49d"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"text\": \"This is a comment\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5003/api/discussions/666dd685a7e4b831c4e0fcb1/comments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"api",
+						"discussions",
+						"666dd685a7e4b831c4e0fcb1",
+						"comments"
+					]
+				},
+				"description": "Add comment to discussion"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5003/api/discussions/666dd685a7e4b831c4e0fcb1/comments/666dd740a7e4b831c4e0fcb4",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjZkY2UxZjI5ZDk1ZTA3Y2MxMTg4NjEiLCJlbWFpbCI6InRlc3QyQGV4YW1wbGUuY29tIiwiaWF0IjoxNzE4NDcyMzY1LCJleHAiOjE3MTg1NTg3NjV9.aTAr_rzufmxlUL1R9Rdm2n8GoXnXphWIdZg9vwVrQZU",
+						"uuid": "c175f35a-32b9-46cb-a4c5-b017d0edf3a6"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"text\": \"Updated comment text\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5003/api/discussions/666dd685a7e4b831c4e0fcb1/comments/666dd842a7e4b831c4e0fcbe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"api",
+						"discussions",
+						"666dd685a7e4b831c4e0fcb1",
+						"comments",
+						"666dd842a7e4b831c4e0fcbe"
+					]
+				},
+				"description": "Update discussion comment"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5003/api/discussions/666dd685a7e4b831c4e0fcb1/comments/666dd842a7e4b831c4e0fcbe",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjZkY2UxZjI5ZDk1ZTA3Y2MxMTg4NjEiLCJlbWFpbCI6InRlc3QyQGV4YW1wbGUuY29tIiwiaWF0IjoxNzE4NDcyMzY1LCJleHAiOjE3MTg1NTg3NjV9.aTAr_rzufmxlUL1R9Rdm2n8GoXnXphWIdZg9vwVrQZU",
+						"uuid": "5ea310a6-ec3f-4a12-9e4b-67adf035d84b"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5003/api/discussions/666dd685a7e4b831c4e0fcb1/comments/666dd842a7e4b831c4e0fcbe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"api",
+						"discussions",
+						"666dd685a7e4b831c4e0fcb1",
+						"comments",
+						"666dd842a7e4b831c4e0fcbe"
+					]
+				},
+				"description": "Delete comment"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5003/api/discussions/666dd685a7e4b831c4e0fcb1/like",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjZkY2UxZjI5ZDk1ZTA3Y2MxMTg4NjEiLCJlbWFpbCI6InRlc3QyQGV4YW1wbGUuY29tIiwiaWF0IjoxNzE4NDcyMzY1LCJleHAiOjE3MTg1NTg3NjV9.aTAr_rzufmxlUL1R9Rdm2n8GoXnXphWIdZg9vwVrQZU",
+						"uuid": "4fb83c3e-0207-48aa-9a6a-a2939fbb3aa6"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5003/api/discussions/666dd685a7e4b831c4e0fcb1/like",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"api",
+						"discussions",
+						"666dd685a7e4b831c4e0fcb1",
+						"like"
+					]
+				},
+				"description": " Like Discussion"
+			},
+			"response": []
+		}
+	]
+}
