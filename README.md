@@ -1,4 +1,4 @@
-# Backend Microservices App
+# SocialDiscuss Backend Microservices App
 
 ## Introduction
 This project demonstrates robust microservice architecture for managing discussions, comments, and user interactions with user authentication and authorization.
